@@ -1,0 +1,46 @@
+.mortgage h1 {
+	color: #81559b;
+	font-weight: bold;
+}
+
+
+input[type='range'] {
+	overflow: hidden;
+	-webkit-appearance: none;
+	background-color:white;
+	margin: 1rem;
+	border-radius: 20px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+	height: 14px; 
+	width: 300px;    
+	-webkit-appearance: none;
+	color: #ccc;
+	margin: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	-webkit-appearance: none;
+	/*cursor: ew-resize; */
+	background: rgb(127, 42, 134);
+	box-shadow: -100px 0 0 100px #c8a8db;
+}
+
+.action button {
+	font: inherit;
+	font-weight: bold;
+	background: #81559b;
+	color: white;
+	padding: 0.5rem 1rem;
+	margin-top: 1rem;
+	border: 1px solid #81559b;
+	border-radius: 4px;
+}
+
+
+
+
