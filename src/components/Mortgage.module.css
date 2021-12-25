@@ -3,21 +3,19 @@
 	font-weight: bold;
 }
 
-
 input[type='range'] {
 	overflow: hidden;
 	-webkit-appearance: none;
-	background-color:white;
+	background-color: white;
 	margin: 1rem;
 	border-radius: 20px;
 }
 
 input[type='range']::-webkit-slider-runnable-track {
-	height: 14px; 
-	width: 300px;    
+	/* height: 12px; */
 	-webkit-appearance: none;
-	color: #ccc;
-	margin: -1px;
+	color: rgb(204, 204, 204);
+	/* margin: -1px; */
 }
 
 input[type='range']::-webkit-slider-thumb {
@@ -25,9 +23,9 @@ input[type='range']::-webkit-slider-thumb {
 	height: 14px;
 	border-radius: 50%;
 	-webkit-appearance: none;
-	/*cursor: ew-resize; */
-	background: rgb(127, 42, 134);
-	box-shadow: -100px 0 0 100px #c8a8db;
+	/* cursor: ew-resize; */
+	background: rgb(97, 26, 148);	
+	box-shadow: -100px 0 0 100px #81559b;
 }
 
 .action button {
@@ -41,6 +39,17 @@ input[type='range']::-webkit-slider-thumb {
 	border-radius: 4px;
 }
 
+@media screen and (max-width: 768px) {
+	input[type='range'] {
+		margin: 1rem 0;
+	}
+	.mortgage label {
+		display: block;
+	}
+	.mortgage h1 {
+		font-size: 1.2rem;
+	}
+}
 
 
 

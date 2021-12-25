@@ -10,8 +10,7 @@ const Mortgage = () => {
 	const [paymentInfo, setpaymentInfo] = useState(false);
 
 	let principalLoanAmt = purchaseprice - downpayment;
-	// Formula for mortgage payments: M = P[r(1+r)^n/((1+r)^n)-1)]
-	// Formula for mortgage payments: M = P[r(1+r)^n/((1+r)^n)-1)]
+	// Formula for mortgage payments: M = P[r(1+r)^n/((1+r)^n)-1)]	
 	let monthlyMortgagePayment = interestRate / 100 / 12;
 	let repaid = repaymenttime * 12;
 	let factor = Math.pow(monthlyMortgagePayment + 1, repaid);
@@ -28,6 +27,7 @@ const Mortgage = () => {
 
 	let totalPayments = monthlyPayments * repaid;
 	let totalInterestPayments = monthlyPayments * repaid - principalLoanAmt;
+	let dollarUSLocale = Intl.NumberFormat('en-US');
 	function submitHandler(e) {
 		e.preventDefault();
 		setpaymentInfo(true);
@@ -40,7 +40,7 @@ const Mortgage = () => {
 					<div className='row'>
 						<div className="col">
 							<div>
-								<label htmlFor="range">Purchase price: ${purchaseprice}</label>
+								<label htmlFor="range">Purchase price: <b> ${dollarUSLocale.format(purchaseprice)}</b></label>
 							</div>
 							<div>
 							<input
@@ -49,14 +49,14 @@ const Mortgage = () => {
 								id="range"
 								min="0"
 								max="1000000"
-								step="1"
+								step="1"								
 								onChange={(e) => setPurchaseprice(e.target.value)}
 							/>
 							</div>						
 						</div>
 						<div className="col">
 							<div>
-								<label htmlFor="range">Down payment: ${downpayment}</label>
+								<label htmlFor="range">Down payment: <b>${dollarUSLocale.format(downpayment)}</b></label>
 							</div>
 							<div>
 								<input
@@ -73,7 +73,7 @@ const Mortgage = () => {
 						<div className="col">
 							<div>
 								<label htmlFor="range">
-								Repayment time: {repaymenttime}
+								Repayment time: <b>{dollarUSLocale.format(repaymenttime)}</b>
 								{repaymenttime <= 1 ? ' year' : ' years'}
 								</label>
 							</div>
@@ -92,7 +92,7 @@ const Mortgage = () => {
 					<div  className='row'>				
 						<div className="col">
 							<div>
-								<label htmlFor="range">Interest rate: {interestRate} %</label>
+								<label htmlFor="range">Interest rate: {dollarUSLocale.format(interestRate)} %</label>
 							</div>
 							<div>
 								<input
@@ -112,7 +112,7 @@ const Mortgage = () => {
 								<p>Loan amount</p>
 							</div>
 							<div>
-								<h2>${principalLoanAmt}</h2>
+								<h2>${dollarUSLocale.format(principalLoanAmt)}</h2>
 							</div>
 						</div>
 						<div className="col">
@@ -125,7 +125,7 @@ const Mortgage = () => {
 								</div>
 									
 								<div>
-									<h2>${monthlyPayments}</h2>
+									<h2>${dollarUSLocale.format(monthlyPayments)}</h2>
 								</div>						
 						</div>	
 									
@@ -137,10 +137,10 @@ const Mortgage = () => {
 						<>
 							<h1>Payment Information</h1>
 							<p>
-								your monthly payment will be <b>${monthlyPayments}</b>
+								your monthly payment will be <b>${dollarUSLocale.format(monthlyPayments)}</b>
 							</p>
 							<p>
-								your total payment will be <b>${totalPayments}</b>
+								your total payment will be <b>${dollarUSLocale.format(totalPayments)}</b>
 							</p>
 							<p>
 								your totalInterest payment will be{' '}
