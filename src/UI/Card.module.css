@@ -9,5 +9,23 @@
 	padding: 20px;	
 }	
 .out{
-	background-color: #f7f7f7;
+	background-color: #f7f7f7;	
+	padding: 150px;	
+} 
+body, html{
+	background-color: #f7f7f7;;
+}
+/*Reponsive for Iphone X,5,6,7,8 plus*/
+@media (max-width: 540px) {
+	.out {
+		padding: 10px;
+		padding-top: 50px;
+	}
+}
+/*Reponsive for Ipad, Ipad pro*/
+@media (min-width: 768px) {
+	.out {
+		padding: 50px;
+		padding-top: 150px;
+	}	
 }
