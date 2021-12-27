@@ -1,16 +1,16 @@
  .mortgage h1 {
-	color: #81559b;
+	color: #8c56ff;
 	font-weight: bold;
 }
 
 .action button {
 	font: inherit;
 	font-weight: bold;
-	background: #81559b;
+	background: #8c56ff;
 	color: white;
 	padding: 0.5rem 1rem;
 	margin-top: 1rem;
-	border: 1px solid #81559b;
+	border: 1px solid #8c56ff;
 	border-radius: 4px;	
 }
 

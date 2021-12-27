@@ -12,8 +12,8 @@ const trackHeight = "16px";
 
 // colours
 const upperColor = "#ffffff";
-const lowerColor = "#81559b";
-const thumbColor = "#611a94";
+const lowerColor = "#8c56ff";
+const thumbColor = "#ffffff";
 const thumbHoverColor = "#611a94";
 const upperBackground = `linear-gradient(to bottom, ${upperColor}, ${upperColor}) 100% 50% / 100% ${trackHeight} no-repeat transparent`;
 const lowerBackground = `linear-gradient(to bottom, ${lowerColor}, ${lowerColor}) 100% 50% / 100% ${trackHeight} no-repeat transparent`;
@@ -31,9 +31,9 @@ const makeLongShadow = (color, size) => {
 };
 
 
-const Wrapper = styled.div`
-  /* width:100%; */
-`;
+/* const Wrapper = styled.div`
+   width:100%; 
+`; */
 
 const QuocRange = styled.input`
   overflow: hidden;
@@ -63,7 +63,7 @@ const QuocRange = styled.input`
     width: ${thumbHeight}px;
     background: ${thumbColor};
     border-radius: 50%;
-    border: 0;
+    border: 8px solid #8c56ff;
     top: 50%;
     transform: translateY(-50%);
     box-shadow: ${makeLongShadow(upperColor, "-10px")};
